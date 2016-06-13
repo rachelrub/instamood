@@ -5,10 +5,18 @@
   <title>Instamood</title>
   <!-- TODO: Include Bootstrap -->
   <!-- TODO: Link your stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <script src="./script.js"></script>
 </head>
 <body>
 	<!-- put stuff here -->
+	<header class="title">InstaMood</header>
+	<div id="list">
+	</div>
+
+ <a href="https://api.instagram.com/oauth/authorize/?client_id=YOUR_CLIENT_ID_HERE&redirect_uri=http://0.0.0.0:8000&response_type=token">Log in with Instagram</a>
 </body>
 </html>

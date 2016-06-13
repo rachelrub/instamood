@@ -22,6 +22,55 @@ $(document).ready(function() {
 });
 
 function handleResponse(response) {
-  console.log(response);
-  // add stuff here!
+  console.log("response:", response);
+  var results = response.data;
+  console.log("results", results);
+  for (var i = 0; i<results.length; i++) {
+    var res = results[i].images.standard_resolution.url; //link to the picture
+    console.log("res", res);
+    var image = $("<img>");
+    image.attr("src", res);
+    $("#list").append(image);
+    // $("#list").append("<span></span");
+    var cap = results[i].caption.text; //link to the picture
+    console.log("cap", cap);
+    var caption = $("<div></div>");
+    $("#list").append("<div>" + cap + "</div>");
+  } 
+
+// EGO SCORE
+// create coutner that increments by one 
+// every time it sees a "true" for "user_has_liked" 
+// in a for loop
+// divide the final count by total number of pictures to get the percent
+// append the percent to the "user stats" section
+
+var egoCounter = 0;
+if (results[i].user_has_liked === true) {
+egoCounter ++;
 }
+var egopercent = egoCounter/results.length;
+$("#list").append("<div>" + egopercent + "%" + "</div>");
+
+
+// /Self Likes 
+ var selflikes=0;
+ for (var i=0; i<response.data.length; i++) {
+   if (response.data[i].user_has_liked === true) {
+     selflikes++;
+   }
+ };
+ var selflikespercent = selflikes/response.data.length;
+ $("#stats").append("<div>" + "Ego Percentage: " + selflikespercent + "%" + "</div>");
+ 
+
+// POPULARITY SCORE
+// add all "object -> likes -> count"
+// divide total count by total number of pictures to find the average
+
+// ACTIVE DAYS
+
+
+  
+  // add stuff here!
+ }

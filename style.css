@@ -1,1 +1,24 @@
 /*you fill this in*/
+body {
+	text-align: center;
+
+}
+.title {
+	font-size: 50px;
+	font-family: Courier;
+}
+.login {
+	font-size: 50px;
+}
+#list {
+	font-family: Courier;
+}
+@media (min-width: 480px) {
+	img {
+		height: 60%;
+		width: 60%;
+	}
+	#list {
+		font-size: 20px;
+	}
+}
