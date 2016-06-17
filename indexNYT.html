@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    .wrapper { padding: 20px; background-color: #fafafa; border: 1pt solid #ddd; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+  <script src="./scriptNYT.js"></script>
+</head>
+<body ng-app="RouterApp">
+  <!-- Navbar -->
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="wrapper">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- 
+ng-model vs {{}}
+Angular vs plain JS
+Why don't I put everything on the scope? (It gets slow)

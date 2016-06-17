@@ -1,0 +1,8 @@
+<div ng-controller="TopCtrl">
+  <h1>The Top NYT Stories</h1>
+  <a href="#/search">Search all stories</a>
+  <ol>
+    <p ng-show="articles.length < 1">Loading...</p>
+    <li ng-repeat="article in articles">{{article.title}}</li>
+  </ol>
+</div>
